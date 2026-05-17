@@ -20,7 +20,8 @@ int tree_stats(const binary_tree_t *tree, int d, int level)
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
 
-	return (tree_stats(tree->left, d, level + 1) && tree_stats(tree->right, d, level + 1));
+	return (tree_stats(tree->left, d, level + 1)
+		&& tree_stats(tree->right, d, level + 1));
 }
 
 /**
